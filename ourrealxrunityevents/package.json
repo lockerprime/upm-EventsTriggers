@@ -1,0 +1,17 @@
+{
+  "name": "com.outrealxr.ourrealxrunityevents",
+  "version": "1.0.0",
+  "displayName": "Outreal XR UnityEvents Trigger System",
+  "description": "This is an example package",
+  "unity": "2020.1",
+  "keywords": [
+    "Unity Events",
+    "OnTriggerEnter",
+    "OnTriggerExit"
+  ],
+  "author": {
+    "name": "kannan",
+    "email": "kannan.inbox2013@gmail.com",
+    "url": "https://www.ourrealxr.com"
+  }
+}
