@@ -1,0 +1,17 @@
+{
+  "name": "com.outrealxr.outrealsrunityformsystem",
+  "version": "1.0.0",
+  "displayName": "Outreal Xr Dynamic Forms",
+  "description": "This is an example package",
+  "unity": "2020.1",
+  "keywords": [
+    "Forms",
+    "Input",
+    "Json"
+  ],
+  "author": {
+    "name": "kannan",
+    "email": "kannan.inbox2013@gmail.com",
+    "url": "https://www.ourrealxr.com"
+  }
+}
