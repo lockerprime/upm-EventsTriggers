@@ -21,10 +21,11 @@ public class FormUiComponents : MonoBehaviour
     List<string> InputformData = new List<string>();
 
     string filePath = Path.Combine(Application.streamingAssetsPath, "file.json");
+    serilaizedData playerInstance = new serilaizedData();
     public void SetForm()
     {
 
-        serilaizedData playerInstance = new serilaizedData();
+    
         for (int i = 0; i < UiType.transform.childCount; i++)
         {
             UiComponents.Add(UiType.transform.GetChild(i).gameObject);
@@ -67,22 +68,18 @@ public class FormUiComponents : MonoBehaviour
              
             }
         }
-
+        SavetoJson();
     }
     public void SavetoJson()
     {
- 
 
-        InputformData.Add(InputField_Data.ToString());
-        InputformData.Add(Slider_Data.ToString());
-        InputformData.Add(Button_Data.ToString());
-        InputformData.Add(Toggle_Data.ToString());
-        InputformData.Add(Dropdown_Data.ToString());
-        string json = JsonUtility.ToJson(InputField_Data, true);
+
+        string json = JsonUtility.ToJson(playerInstance, true);
+        Debug.LogError("the path" + Application.dataPath);
         File.WriteAllText(Application.dataPath + "/FormDataFile.json", json);
 #if UNITY_EDITOR
 
-        Debug.LogError("the path" + Application.dataPath);
+      
 #endif
 #if UNITY_WEBGL
         File.WriteAllText(filePath, json);
